@@ -1,0 +1,26 @@
+<div class="container-general-calculator">
+    <div class="subcontainer-input-calculator">
+        <input type="text" name="input-calculator" [value]="valor_input">
+        <input type="text" name="input-calculator" [value]="valor_input2">
+    </div>
+
+    <div class="subcontainer-buttons-operations">
+        <button type="button" class="button-style" (click)="Insertar_Valor_btn(1)">1</button>
+        <button type="button" class="button-style" (click)="Insertar_Valor_btn(2)">2</button>
+        <button type="button" class="button-style" (click)="Insertar_Valor_btn(3)">3</button>
+        <button type="button" class="button-style" (click)="Insertar_Valor_btn(4)">4</button>
+        <button type="button" class="button-style" (click)="Insertar_Valor_btn(5)">5</button>
+        <button type="button" class="button-style" (click)="Insertar_Valor_btn(6)">6</button>
+        <button type="button" class="button-style" (click)="Insertar_Valor_btn(7)">7</button>
+        <button type="button" class="button-style" (click)="Insertar_Valor_btn(8)">8</button>
+        <button type="button" class="button-style" (click)="Insertar_Valor_btn(9)">9</button>
+        <button type="button" class="button-style" (click)="Insertar_Valor_btn(0)">0</button>
+        <button type="button" class="button-style" (click)="Insertar_Simbolo('*')">*</button>
+        <button type="button" class="button-style" (click)="Insertar_Simbolo('/')" >/</button>
+        <button type="button" class="button-style" (click)="Insertar_Simbolo('+')" >+</button>
+        <button type="button" class="button-style" (click)="Insertar_Simbolo('-')" >-</button>
+        <button type="button" class="button-style" (click)="Insertar_Simbolo('x²')" >x²</button>
+        <button type="button" class="button-style" (click)="Insertar_Simbolo('√')" >√</button>
+        <button type="button" class="button-style" (click)="Insertar_Resultado(true)">=</button>
+        <button type="button" class="button-style" (click)="Vaciar_Inputs()">C</button>
+    </div>

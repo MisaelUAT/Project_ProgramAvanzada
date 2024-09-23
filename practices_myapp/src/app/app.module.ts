@@ -8,6 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ContentComponent } from './content/content.component';
 import { InicioComponent } from './content/inicio/inicio.component';
 import { PortafolioComponent } from './content/portafolio/portafolio.component';
+import { CalculatorComponent } from './content/calculator/calculator.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { PortafolioComponent } from './content/portafolio/portafolio.component';
     NavbarComponent,
     ContentComponent,
     InicioComponent,
-    PortafolioComponent
+    PortafolioComponent,
+    CalculatorComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

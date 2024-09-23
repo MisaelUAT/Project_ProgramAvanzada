@@ -1,0 +1,13 @@
+:root{
+    --color_celeste: #69DDFF;
+    --color_lightsky: #96CDFF;
+    --color_lavender: #D8E1FF;
+    --color_pinklavender: #DBBADD;
+    --color_puce: #BE92A2;
+}
+
+
+.container-generator-calculator{
+    background-color: var(--color_celeste);
+    box-shadow: 10px 10px 20px 5px lightblue;
+}

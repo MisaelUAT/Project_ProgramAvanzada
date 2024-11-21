@@ -11,6 +11,8 @@ import { CalculadoraComponent } from './content/calculadora/calculadora.componen
 import { InicioComponent } from './content/inicio/inicio.component';
 import { PortafolioComponent } from './content/portafolio/portafolio.component';
 import { AngularFireModule } from '@angular/fire/compat';
+import { CrudInicioService } from './services/crud-inicio.service';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   {path:'', component: InicioComponent},
@@ -31,6 +33,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes,{enableTracing:true}),
     AngularFireModule.initializeApp({
       apiKey: "AIzaSyBeoeBWBGmgTV_zyYhUEP5iDhcPzgDiNN4",
@@ -42,7 +45,10 @@ const appRoutes: Routes = [
       measurementId: "G-JTMS1Z6Y0Y"
     })
   ],
-  providers: [],
+  providers: [
+    CrudInicioService
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

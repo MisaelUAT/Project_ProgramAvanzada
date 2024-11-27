@@ -17,6 +17,9 @@ form_inicio = {
 };
 coleccion!: string;
 registros !: any;
+proceso_agregar!: boolean;
+proceso_editar!: boolean;
+registro !: any;
 
 
   constructor(private crud: CrudInicioService){}
@@ -37,6 +40,37 @@ registros !: any;
       }
       else{
         alert("Error a la Hora de Guardar")
+      }
+    })
+  }
+
+  Agregar_Datos(){
+    this.proceso_agregar = true;
+    this.proceso_editar = false;
+    this.form_inicio = {
+      Correo: "",
+      Contrasena:"",
+      Nombre:"", 
+      Apellidos:"",
+      Activo:false
+    }
+  }
+
+  Editar_Informacion(registro:any){
+    this.proceso_agregar = false
+    this.proceso_editar = true
+    this.form_inicio = registro
+    this.registro = registro
+  }
+
+  Actualizar_Datos(){
+    this.crud.Update(this.coleccion,this.registro).then((response:any)=>{
+      if(response){
+        alert("¡El registro se actualizo correctamente!")
+        location.reload()
+      }
+      else{
+        alert("Hubo error.")
       }
     })
   }

@@ -75,4 +75,20 @@ registro !: any;
     })
   }
 
+  Eliminar_Datos(Registro: any){
+    if(confirm("Deseas Eliminar este Usuario?")){
+      this.crud.Delete_Coleccion(this.coleccion,Registro).then((response:any)=>{
+        if(response){
+          alert("¡El registro se elimino correctamente!")
+        }
+        else{
+          alert("Hubo error.")
+        }
+        console.log(response)
+        location.reload()
+      })
+    }
+
+  }
+
 }

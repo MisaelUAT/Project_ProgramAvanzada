@@ -48,5 +48,17 @@ export class CrudInicioService {
     })
     return data_update
   }
+
+  Delete_Coleccion(Coleccion: string, Registro: any){
+    let data_delete = new Promise((resolve,reject)=>{
+      this.db.collection(Coleccion).doc(Registro.id).delete().then((Response)=>{
+        resolve(true)
+      }).catch((err=>{
+        reject(false)
+      }))
+    })
+
+    return data_delete
+  }
  
 }
